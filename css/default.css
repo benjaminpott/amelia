@@ -1,0 +1,7 @@
+body, * {font-family: 'Raleway', sans-serif;}
+h1, h2, h3, h4, h5, h6 {margin-top:0px;)}
+
+/* detctor */
+.blue{ color: #fff; background: blue; padding: 5px; }
+.no { color: #fff; background: red; padding: 5px; }
+.yes { color: #fff; background: green; padding: 5px; }

@@ -1,0 +1,20 @@
+body, * {font-family: 'Raleway', sans-serif;}
+h1, h2, h3, h4, h5, h6 {margin-top:0px;)}
+
+/* detctor */
+.blue{ color: #fff; background: blue; padding: 5px; }
+.no { color: #fff; background: red; padding: 5px; }
+.yes { color: #fff; background: green; padding: 5px; }
+	/* topbar style aaa */
+	.top-bar.expanded {display: inline;}
+	.top-bar.expanded .title-area, .top-bar-section ul li:hover > a {background: rgb(79, 109, 172);}
+	.top-bar.expanded .toggle-topbar a{color:rgb(79, 109, 172);}
+	.top-bar.expanded .toggle-topbar a span{box-shadow: 0 10px 0 1px #FFFFFF, 0 16px 0 1px #FFFFFF, 0 22px 0 1px #FFFFFF;}
+	.top-bar, .top-bar-section ul {background:none;}
+	#bb-top-bar {height: 80px;overflow: hidden;}
+	#bb-logo-large {left: -20px; position: relative; padding: 10px;}
+	#menu-wrapper { border-top: 1px solid rgba(0,0,0,0.10);	height: 46px;	width: 100%;}
+	#menu-wrapper .row.collapse.fixed { top: 109px; }
+	#menu-wrapper, .top-bar, .top-bar-section li a:not(.button) { background: none repeat scroll 0 0 rgb(59, 89, 152); color: #fff}
+	.top-bar-section li a:hover:not(.button) { background: none repeat scroll 0% 0% rgb(79, 109, 172)!important; color: #fff}
+	.top-bar-section .divider { border-bottom: 1px solid rgb(79, 109, 172)!important; border-top: 1px solid rgba(0,0,0,0.1)!important; clear: both; height: 1px; width: 100%; }
