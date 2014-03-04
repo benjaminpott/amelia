@@ -16,7 +16,7 @@ function fx_bb_theme_box( $wp_customize ) {
 		'section'  => 'bb_theme_images_section',
 		'priority' => 10,
 	) ) );
-	$wp_customize->add_setting( 'bb_theme_image_logo_large_width', array( 'default' => '100px' ) );
+	$wp_customize->add_setting( 'bb_theme_image_logo_large_width', array( 'default' => '500px' ) );
 	$wp_customize->add_control( 'bb_theme_image_logo_large_width', array(
 		'label'    => __( 'Logo on large screen width', 'bb_' ),
 		'section'  => 'bb_theme_images_section',
@@ -37,7 +37,7 @@ function fx_bb_theme_box( $wp_customize ) {
 		'section'  => 'bb_theme_images_section',
 		'priority' => 20,
 	) ) );
-	$wp_customize->add_setting( 'bb_theme_image_logo_medium_width', array( 'default' => '100px' ) );
+	$wp_customize->add_setting( 'bb_theme_image_logo_medium_width', array( 'default' => '400px' ) );
 	$wp_customize->add_control( 'bb_theme_image_logo_medium_width', array(
 		'label'    => __( 'Logo on medium screen width', 'bb_' ),
 		'section'  => 'bb_theme_images_section',
@@ -58,7 +58,7 @@ function fx_bb_theme_box( $wp_customize ) {
 		'section'  => 'bb_theme_images_section',
 		'priority' => 30,
 	) ) );
-	$wp_customize->add_setting( 'bb_theme_image_logo_small_width', array( 'default' => '100px' ) );
+	$wp_customize->add_setting( 'bb_theme_image_logo_small_width', array( 'default' => '900px' ) );
 	$wp_customize->add_control( 'bb_theme_image_logo_small_width', array(
 		'label'    => __( 'Logo on small screen width', 'bb_' ),
 		'section'  => 'bb_theme_images_section',
@@ -452,34 +452,34 @@ function fx_bb_theme_box( $wp_customize ) {
 		'priority' => 30,
 	) ) );
 
-// Contact Details
-	$wp_customize->add_section( 'bb_theme_contacts_section', array(
-		'title'    => 'Contact Details',
-		'priority' => 60,
-	) );
-	// inputs
-	$wp_customize->add_setting( 'bb_theme_contact_email' );
-	$wp_customize->add_control( 'bb_theme_contact_email', array(
-		'label'    => __( 'Email Address', 'bb_' ),
-		'section'  => 'bb_theme_contacts_section',
-		'type'     => 'text',
-		'priority' => 10,
-	) );
-	$wp_customize->add_setting( 'bb_theme_contact_phone' );
-	$wp_customize->add_control( 'bb_theme_contact_phone', array(
-		'label'    => __( 'Phone Number', 'bb_' ),
-		'section'  => 'bb_theme_contacts_section',
-		'type'     => 'text',
-		'priority' => 20,
-	) );
-	$wp_customize->add_setting( 'bb_theme_contact_position', array( 'default' => 'right') );
-	$wp_customize->add_control( 'bb_theme_contact_position', array(
-		'label'    => 'Contact Menu',
-		'section'  => 'bb_theme_contacts_section',
-		'type'     => 'radio',
-		'choices'  => array( 'left' => 'Left', 'right' => 'Right', 'hidden' => 'Hidden', ),
-		'priority' => 10,
-	) );
+// // Contact Details
+// 	$wp_customize->add_section( 'bb_theme_contacts_section', array(
+// 		'title'    => 'Contact Details',
+// 		'priority' => 60,
+// 	) );
+// 	// inputs
+// 	$wp_customize->add_setting( 'bb_theme_contact_email' );
+// 	$wp_customize->add_control( 'bb_theme_contact_email', array(
+// 		'label'    => __( 'Email Address', 'bb_' ),
+// 		'section'  => 'bb_theme_contacts_section',
+// 		'type'     => 'text',
+// 		'priority' => 10,
+// 	) );
+// 	$wp_customize->add_setting( 'bb_theme_contact_phone' );
+// 	$wp_customize->add_control( 'bb_theme_contact_phone', array(
+// 		'label'    => __( 'Phone Number', 'bb_' ),
+// 		'section'  => 'bb_theme_contacts_section',
+// 		'type'     => 'text',
+// 		'priority' => 20,
+// 	) );
+// 	$wp_customize->add_setting( 'bb_theme_contact_position', array( 'default' => 'right') );
+// 	$wp_customize->add_control( 'bb_theme_contact_position', array(
+// 		'label'    => 'Contact Menu',
+// 		'section'  => 'bb_theme_contacts_section',
+// 		'type'     => 'radio',
+// 		'choices'  => array( 'left' => 'Left', 'right' => 'Right', 'hidden' => 'Hidden', ),
+// 		'priority' => 10,
+// 	) );
 
 // Copyright
 	$wp_customize->add_section( 'bb_theme_copyright_section', array(
