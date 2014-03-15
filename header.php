@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="<?php bb_e( 'theme_url' ); ?>/css/normalize.css" />
     <link rel="stylesheet" href="<?php bb_e( 'theme_url' ); ?>/css/theme.css?v=<?php _e( date('c') ); ?>" />
 
+<?php if(get_option('bb_gf1')) bb_e( '    <link href="'.get_option('bb_gf1').'" rel="stylesheet" type="text/css">' ); ?>
+<?php if(get_option('bb_gf2')) bb_e( '    <link href="'.get_option('bb_gf2').'" rel="stylesheet" type="text/css">' ); ?>
+<?php if(get_option('bb_gf3')) bb_e( '    <link href="'.get_option('bb_gf3').'" rel="stylesheet" type="text/css">' ); ?>
+
+    <link rel="stylesheet" href="<?php bb_e( 'theme_url' ); ?>/icons/foundation-icons.css" />
+    <link rel="stylesheet" href="<?php bb_e( 'theme_url' ); ?>/icons/foundation-icons.eot" />
+
     <script src="<?php bb_e( 'theme_url' ); ?>/js/modernizr.js"></script>
 
 <?php wp_head(); ?>
