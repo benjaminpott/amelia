@@ -53,7 +53,7 @@ function mycpt_meta_field($title,$name,$size,$type='text',$placeholder=''){
 
 			foreach($placeholder as $selected){
 				var_dump($selected->id);
-			   echo ' 		<option value="'.$selected->id.'"' .selected( $selected->id, $current, false ). '>' .__( $selected->title, 'tn_' ). '</option>'."\n";
+			   echo ' 		<option value="'.$selected->id.'"' .selected( $selected->id, $current, false ). '>' .__( $selected->title, 'bb_' ). '</option>'."\n";
 			}
 
 			echo  '</select>'."\n";

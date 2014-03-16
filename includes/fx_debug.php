@@ -6,10 +6,10 @@ function fx_debug_d( $value ) {
 }
 
 function fx_debug( $value, $delimter = '<hr>' ) {
-	_e( '<pre>', 'tn_' );
+	_e( '<pre>', 'bb_' );
 	var_dump( $value );
-	_e( '</pre>', 'tn_' );
-	_e( $delimter, 'tn_' );
+	_e( '</pre>', 'bb_' );
+	_e( $delimter, 'bb_' );
 }
 
 ?>

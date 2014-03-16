@@ -2,8 +2,8 @@
 
 $contact  = '<li class="has-dropdown not-click"><a href="/contact">Contact Us</a>'."\n";
 $contact .= ' <ul class="dropdown">'."\n";
-$contact .= '   <li><a href="mailto:'.tn_r( 'tn_theme_contact_email', 'customizer' ).'"">'.tn_r( 'tn_theme_contact_email', 'customizer' ).'</a></li>'."\n";
-$contact .= '   <li><a>'.tn_r( 'tn_theme_contact_phone', 'customizer' ).'</a></li>'."\n";
+$contact .= '   <li><a href="mailto:'.bb_r( 'bb_theme_contact_email', 'customizer' ).'"">'.bb_r( 'bb_theme_contact_email', 'customizer' ).'</a></li>'."\n";
+$contact .= '   <li><a>'.bb_r( 'bb_theme_contact_phone', 'customizer' ).'</a></li>'."\n";
 $contact .= '   <li class="divider"></li>'."\n";
 $contact .= '    <li><a href="/contact">Enquiry Form &rarr;</a></li>'."\n";
 $contact .= ' </ul>'."\n";
@@ -45,22 +45,22 @@ foreach ( $pages as $page ) {
   }
 }
 //var_dump($menu);
-//var_dump( __( get_theme_mod( 'tn_theme_topbar_pages' ) ) );
+//var_dump( __( get_theme_mod( 'bb_theme_topbar_pages' ) ) );
 ?>
 <nav class="top-bar" data-topbar>
   <ul class="title-area">
     <!-- Title Area -->
     <li class="name hide-for-medium-up">
-      <img src="<?php tn_e( 'tn_theme_image_logo_small', 'customizer' ); ?>" style="margin:5px;" >
+      <img src="<?php bb_e( 'bb_theme_image_logo_small', 'customizer' ); ?>" style="margin:5px;" >
     </li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span><?php tn_e( 'tn_theme_topbar_title', 'customizer' ); ?></span></a></li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span><?php bb_e( 'bb_theme_topbar_title', 'customizer' ); ?></span></a></li>
       </ul>
 
       <section class="top-bar-section">
         <!-- Left Nav Section -->
         <ul class="left">
-<?php if ( __( get_theme_mod( 'tn_theme_contact_position' ) ) == 'left' ) echo $contact; ?>
-<?php if ( __( get_theme_mod( 'tn_theme_topbar_pages' ) ) == 1 ) echo $menu; ?>
+<?php if ( __( get_theme_mod( 'bb_theme_contact_position' ) ) == 'left' ) echo $contact; ?>
+<?php if ( __( get_theme_mod( 'bb_theme_topbar_pages' ) ) == 1 ) echo $menu; ?>
 <?php
 
 $menu_name = 'top_bar_left';
@@ -78,7 +78,7 @@ if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ 'top_bar_le
 
         <!-- Right Nav Section -->
         <ul class="right">
-<?php if ( __( get_theme_mod( 'tn_theme_topbar_pages' ) ) == 2 ) echo $menu; ?>
+<?php if ( __( get_theme_mod( 'bb_theme_topbar_pages' ) ) == 2 ) echo $menu; ?>
 <?php
 
 $menu_name = 'top_bar_right';
@@ -94,7 +94,7 @@ if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ 'top_bar_ri
 }
 ?>
 
-<?php if ( __( get_theme_mod( 'tn_theme_contact_position' ) ) == 2 ) echo $contact; ?>
+<?php if ( __( get_theme_mod( 'bb_theme_contact_position' ) ) == 2 ) echo $contact; ?>
         </ul>
       </section>
     </nav>

@@ -13,35 +13,35 @@ $x = get_bloginfo( 'template_directory' );
 $x = substr( $x, ( strlen( $x ) - ( ( strrpos( $x, '/' ) ) ) - 1 ) * -1 );
 $GLOBALS['css_path'] 													= "wp-content/themes/$x/css/";
 
-// global variables can be called with either tn_e or tn_r
+// global variables can be called with either bb_e or bb_r
 // _e for echo & _r for return
 
-function tn_e( $variable, $domain = 'tn_' ){
+function bb_e( $variable, $domain = 'bb_' ){
 	// $text (string) (required) Text to translate. Default: None
 	// $domain (string) (optional) Domain to retrieve the translated text.  Default: 'default'
- echo tn_tn_( $variable, $domain );
+ echo bb_bb_( $variable, $domain );
 }
 
-function tn_r( $variable, $domain = 'tn_' ){
+function bb_r( $variable, $domain = 'bb_' ){
 	// $text (string) (required) Text to translate. Default: None
 	// $domain (string) (optional) Domain to retrieve the translated text.  Default: 'default'
- return tn_tn_( $variable, $domain );
+ return bb_bb_( $variable, $domain );
 }
 
-function tn__( $variable, $domain = 'tn_' ){
+function bb__( $variable, $domain = 'bb_' ){
 	// $text (string) (required) Text to translate. Default: None
 	// $domain (string) (optional) Domain to retrieve the translated text.  Default: 'default'
- return tn_tn_( $variable, $domain );
+ return bb_bb_( $variable, $domain );
 }
 
-function tn_tn_( $variable, $domain ){
+function bb_bb_( $variable, $domain ){
 	if ( $domain == 'customizer' ) {
 		$variable = get_theme_mod( $variable );
-		$domain = 'tn_';
+		$domain = 'bb_';
 	}
 	if ( $domain == 'option' ) {
 		$variable = get_option( $variable, true );
-		$domain = 'tn_';
+		$domain = 'bb_';
 	}
 
 	// var_dump( $GLOBALS[$variable] );

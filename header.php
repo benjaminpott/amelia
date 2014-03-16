@@ -2,10 +2,10 @@
 <html>
 
   <head>
-    <title><?php tn_e( 'site_title' ) ?></title>
+    <title><?php bb_e( 'site_title' ) ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="<?php tn_e( 'tn_theme_image_favicon', 'customizer' ); ?>" type="image/png" />
+    <link rel="icon" href="<?php bb_e( 'bb_theme_image_favicon', 'customizer' ); ?>" type="image/png" />
 
 <?php wp_head(); ?>
   </head>
