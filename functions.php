@@ -2,12 +2,18 @@
 
 // Theme Elements
 require_once('includes/theme_globals.php'); // <-- gloabl variables
+<<<<<<< HEAD
 require_once('includes/theme_scripts.php'); // <-- enques scripts to header
+=======
+>>>>>>> 8283ba2699cc29185c6ce625ad34c4a0b0598d20
 require_once('includes/theme_menus.php'); // <-- menus
 require_once('includes/theme_google_fonts.php'); // <-- theme options to reference upto three google fonts
 require_once('includes/theme_customizer.php'); // <-- theme customizer
 require_once('includes/theme_style.php'); // <-- dynamic stylesheets
+<<<<<<< HEAD
 require_once('includes/theme_row.php'); // <-- theme customizer rows
+=======
+>>>>>>> 8283ba2699cc29185c6ce625ad34c4a0b0598d20
 
 // Common Functions (fx_...php) <-- from out functions libary
 require_once('includes/fx_convert_color.php');
