@@ -18,7 +18,4 @@ h1, h2, h3, h4, h5, h6 {margin-top:0px;)}
 	#menu-wrapper, .top-bar, .top-bar-section li a:not(.button) { background: none repeat scroll 0 0 rgb(59, 89, 152); color: #fff}
 	.top-bar-section li a:hover:not(.button) { background: none repeat scroll 0% 0% rgb(79, 109, 172)!important; color: #fff}
 	.top-bar-section .divider { border-bottom: 1px solid rgb(79, 109, 172)!important; border-top: 1px solid rgba(0,0,0,0.1)!important; clear: both; height: 1px; width: 100%; }
-<<<<<<< HEAD
  .full-row:not(#row-topbar) {min-height:100px;}
-=======
->>>>>>> 8283ba2699cc29185c6ce625ad34c4a0b0598d20
