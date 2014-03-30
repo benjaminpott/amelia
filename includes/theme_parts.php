@@ -1,7 +1,7 @@
 <?php
 
 /*
- * last updated: 30/03/2014
+ * last updated: 31/03/2014
  *
  */
 
@@ -72,5 +72,27 @@ function fx_theme_part_end ( $part, $partname ){
   _e( '<!-- end '.$partname.' row -->'."\n", 'bb_' );
 
 }
+function fx_theme_part_row_shortcode( $atts, $content = null ) {
+
+  extract( $atts );
+  $part = 'row';
+
+  fx_theme_part_start( $part, $name, $class, $type );
+  _e( $content , 'bb_' );
+  fx_theme_part_end ( $part, $name );
+
+}
+function fx_theme_part_section_shortcode( $atts, $content = null ) {
+
+  extract( $atts );
+  $part = 'section';
+
+  fx_theme_part_start( $part, $name, $class, $type );
+  _e( $content , 'bb_' );
+  fx_theme_part_end ( $part, $name );
+
+}
+add_shortcode( 'row', 'fx_theme_part_row_shortcode' );
+add_shortcode( 'section', 'fx_theme_part_section_shortcode' );
 
 ?>
