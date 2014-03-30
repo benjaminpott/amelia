@@ -1,61 +1,65 @@
 <?php
 
 /*
- * last updated: 16/03/2014
+ * last updated: 30/03/2014
  *
  */
 
 // row customizers
 function fx_theme_row_customizer( $wp_customize ) {
 
-		$theme_rows = explode( ',', __( get_theme_mod( 'bb_theme_rows' ) ) );
-			if ( count( $theme_rows ) != 0 && strlen( $theme_rows[0] ) != 0 ) {
-				$priority = 50;
-			foreach ( $theme_rows as $rowname ) {
+		$theme_elements = array ('sections','rows','parts');
+		foreach ($theme_elements as $theme_element ) {
 
-	    // add to row options to customizer
-	    $section = 'bb_theme_'.$rowname.'_section';
-	    $wp_customize->add_section( 'bb_theme_'.$rowname.'_section' , array(
-	      'title'    => ucfirst( $rowname ),
-	      'priority' => $priority,
-	    ) );
-	    // inputs
-	    $wp_customize->add_setting( 'bb_theme_'.$rowname.'_show', array( 'default' => '1') );
-	    $wp_customize->add_control( 'bb_theme_'.$rowname.'_show', array(
-	      'label'    => __( 'Show '.$rowname, 'bb_'),
-	      'section'  => 'bb_theme_'.$rowname.'_section',
-	      'type'     => 'checkbox',
-	      'choices'  => array( '0' => 'Hidden', '1' => 'Full width', '2' => 'Within a row', ),
-	      'priority' => 10,
-	    ) );
-	    $wp_customize->add_setting( 'bb_theme_'.$rowname.'_bg_image', array( 'default' => esc_url( get_bloginfo( 'template_url' ) ).'/images/'.$rowname.'_bg.png' ) );
-	    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bb_theme_'.$rowname.'_bg_image', array(
-	      'label'    => __( 'Background Image', 'bb_' ),
-	      'section'  => 'bb_theme_'.$rowname.'_section',
-	      'priority' => 20,
-	    ) ) );
-	    $wp_customize->add_setting( 'bb_theme_'.$rowname.'_bg_color', array( 'default' => '#cecece', 'sanitize_callback' => 'sanitize_hex_color', ) );
-	    $wp_customize->add_control( new WP_Customize_Color_Control(  $wp_customize, 'bb_theme_'.$rowname.'_bg_color', array(
-	      'label'    => __( 'Background Color', 'bb_' ),
-	      'section'  => 'bb_theme_toprow_section',
-	      'priority' => 30,
-	    ) ) );
-	    $wp_customize->add_setting( 'bb_theme_'.$rowname.'_bg_css' );
-	    $wp_customize->add_control( 'bb_theme_'.$rowname.'_bg_css', array(
-	      'label'    => __( 'CSS', 'bb_' ),
-	      'description' => 'excludes color and background image',
-	      'section'  => 'bb_theme_'.$rowname.'_section',
-	      'type'     => 'text',
-	      'priority' => 40,
-	    ) );
-	    $wp_customize->add_setting( 'bb_theme_'.$rowname.'_min_height', array( 'default' => '100px' ) );
-	    $wp_customize->add_control( 'bb_theme_'.$rowname.'_min_height', array(
-	      'label'    => __( 'Min Height', 'bb_' ),
-	      'section'  => 'bb_theme_'.$rowname.'_section',
-	      'type'     => 'text',
-	      'priority' => 50,
-	    ) );
-	    $priority++;
+			$theme_parts = explode( ',', __( get_theme_mod( 'bb_theme_rows' ) ) );
+				if ( count( $theme_parts] ) != 0 && strlen( $theme_parts[0] ) != 0 ) {
+					$priority = 50;
+					foreach ( $theme_parts as $partname ) {
+
+		    // add to row options to customizer
+		    $section = 'bb_theme_'.$theme_elements.'_'.$partname.'_section';
+		    $wp_customize->add_section( 'bb_theme_'.$theme_elements.'_'.$partname.'_section' , array(
+		      'title'    => ucfirst( $partname ),
+		      'priority' => $priority,
+		    ) );
+		    // inputs
+		    $wp_customize->add_setting( 'bb_theme_'.$theme_elements.'_'.$partname.'_show', array( 'default' => '1') );
+		    $wp_customize->add_control( 'bb_theme_'.$theme_elements.'_'.$partname.'_show', array(
+		      'label'    => __( 'Show '.$partname, 'bb_'),
+		      'section'  => 'bb_theme_'.$theme_elements.'_'.$partname.'_section',
+		      'type'     => 'checkbox',
+		      'choices'  => array( '0' => 'Hidden', '1' => 'Full width', '2' => 'Within a row', ),
+		      'priority' => 10,
+		    ) );
+		    $wp_customize->add_setting( 'bb_theme_'.$theme_elements.'_'.$partname.'_bg_image', array( 'default' => esc_url( get_bloginfo( 'template_url' ) ).'/images/'.$theme_elements.'_'.$partname.'_bg.png' ) );
+		    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bb_theme_'.$theme_elements.'_'.$partname.'_bg_image', array(
+		      'label'    => __( 'Background Image', 'bb_' ),
+		      'section'  => 'bb_theme_'.$theme_elements.'_'.$partname.'_section',
+		      'priority' => 20,
+		    ) ) );
+		    $wp_customize->add_setting( 'bb_theme_'.$theme_elements.'_'.$partname.'_bg_color', array( 'default' => '#cecece', 'sanitize_callback' => 'sanitize_hex_color', ) );
+		    $wp_customize->add_control( new WP_Customize_Color_Control(  $wp_customize, 'bb_theme_'.$theme_elements.'_'.$partname.'_bg_color', array(
+		      'label'    => __( 'Background Color', 'bb_' ),
+		      'section'  => 'bb_theme_toprow_section',
+		      'priority' => 30,
+		    ) ) );
+		    $wp_customize->add_setting( 'bb_theme_'.$theme_elements.'_'.$partname.'_bg_css' );
+		    $wp_customize->add_control( 'bb_theme_'.$theme_elements.'_'.$partname.'_bg_css', array(
+		      'label'    => __( 'CSS', 'bb_' ),
+		      'description' => 'excludes color and background image',
+		      'section'  => 'bb_theme_'.$theme_elements.'_'.$partname.'_section',
+		      'type'     => 'text',
+		      'priority' => 40,
+		    ) );
+		    $wp_customize->add_setting( 'bb_theme_'.$theme_elements.'_'.$partname.'_min_height', array( 'default' => '100px' ) );
+		    $wp_customize->add_control( 'bb_theme_'.$theme_elements.'_'.$partname.'_min_height', array(
+		      'label'    => __( 'Min Height', 'bb_' ),
+		      'section'  => 'bb_theme_'.$theme_elements.'_'.$partname.'_section',
+		      'type'     => 'text',
+		      'priority' => 50,
+		    ) );
+		    $priority++;
+				}
 			}
 		}
 }
@@ -74,9 +78,23 @@ function fx_theme_customizer_options( $wp_customize ) {
 	$wp_customize->add_control( 'bb_theme_topbar_section_check', array( 'type' => 'checkbox', 'label' => 'Topbar Customizer', 'section' => 'bb_theme_options_section' ) );
 	$wp_customize->add_setting( 'bb_theme_pallet_check' );
 	$wp_customize->add_control( 'bb_theme_pallet_check', array( 'type' => 'checkbox', 'label' => 'Pallet Customizer', 'section' => 'bb_theme_options_section' ) );
-	$wp_customize->add_setting( 'bb_theme_rows' );
+		$wp_customize->add_setting( 'bb_theme_sections' );
+	$wp_customize->add_control( 'bb_theme_sections', array(
+		'label'    => __( 'fx_theme_section();', 'bb_' ),
+		'section'  => 'bb_theme_options_section',
+		'type'     => 'text',
+		'priority' => 11,
+	) );
+		$wp_customize->add_setting( 'bb_theme_rows' );
 	$wp_customize->add_control( 'bb_theme_rows', array(
 		'label'    => __( 'fx_theme_row();', 'bb_' ),
+		'section'  => 'bb_theme_options_section',
+		'type'     => 'text',
+		'priority' => 11,
+	) );
+	$wp_customize->add_setting( 'bb_theme_parts' );
+	$wp_customize->add_control( 'bb_theme_parts', array(
+		'label'    => __( 'fx_theme_part();', 'bb_' ),
 		'section'  => 'bb_theme_options_section',
 		'type'     => 'text',
 		'priority' => 11,

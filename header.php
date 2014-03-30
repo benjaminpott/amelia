@@ -14,10 +14,7 @@
     <!-- start everything -->
     <div class="s-everything">
 
-<?php fx_theme_row( 'toprow' , 'hide-for-small show-for-medium-up' ); ?>
-<?php fx_theme_row( 'topbar' , '', 'nav_topbar.php'); ?>
-<?php fx_theme_row( 'herorow' , 'hide-for-small show-for-medium-up' ); ?>
-
 <?php // --> index.php or page template. ?>
 <?php // --> see https://codex.wordpress.org/Template_Hierarchy ?>
+<?php // --> use fx_theme_row, fx_theme_section or fx_theme_part ?>
 <?php // --> finsh with footer.php ?>
