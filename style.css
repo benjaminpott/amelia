@@ -5,12 +5,15 @@ Theme URI: http://wiki.brownbox.net.au/index.php?title=Amelia
 Author: Brownbox
 Author URI: http://brownbox.net.au/
 Description: WordPress theme boilerplate based on ZURB Foundation 5
-Version: 1.03
+Version: 1.031
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Release Notes
 =============
+1.031
+* added shortcodes to theme_part.php
+
 1.03
 * removed php libaries
 * extended fx_theme_row with fx_theme_section and fx_theme_part
